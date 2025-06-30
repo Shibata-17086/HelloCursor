@@ -1,69 +1,71 @@
-# React + TypeScript + Vite
+# MathVisual - 数学視覚学習アプリ
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+高校基礎から大学発展までの数学を、グラフや立体図を使って視覚的に学習できるウェブアプリケーションです。
 
-Currently, two official plugins are available:
+## 特徴
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🎯 **インタラクティブな視覚化** - グラフや3D図形をマウスで操作しながら、数学の概念を直感的に理解
+- 📚 **段階的な学習** - 高校基礎から大学発展まで、レベルに応じて段階的に学習を進められる
+- 💡 **豊富な例題** - 各トピックには具体的な例題と詳しい解説を用意
+- ⚡ **リアルタイム計算** - パラメータを変更すると、グラフや図形がリアルタイムで更新
 
-## Expanding the ESLint configuration
+## 学習トピック
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### 高校基礎
+- 二次関数
+- 三角関数の基礎
+- 平面ベクトル
+- 数列
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### 高校発展
+- 微分
+- 積分
+- 複素数
+- 円錐曲線
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+### 大学基礎
+- 線形代数の基礎
+- 多変数微積分
+- 確率分布
+- フーリエ級数
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### 大学発展
+- 複素解析
+- 微分方程式
+- トポロジー
+- 多様体
+
+## 技術スタック
+
+- **フロントエンド**: React + TypeScript
+- **ビルドツール**: Vite
+- **スタイリング**: TailwindCSS
+- **グラフ描画**: Plotly.js
+- **3D描画**: Three.js
+- **アニメーション**: Framer Motion
+- **数式処理**: Math.js
+
+## セットアップ
+
+```bash
+# 依存関係のインストール
+npm install
+
+# 開発サーバーの起動
+npm run dev
+
+# プロダクションビルド
+npm run build
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 使い方
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+1. トップページから「学習を始める」をクリック
+2. トピック一覧から学習したい項目を選択
+3. インタラクティブなグラフや図形を操作して概念を理解
+4. パラメータを調整して、変化を観察
+5. 理論説明を読んで、数学的な背景を学習
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## ライセンス
+
+MIT License

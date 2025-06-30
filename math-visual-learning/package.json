@@ -1,8 +1,9 @@
 {
   "name": "math-visual-learning",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
+  "description": "高校基礎から大学発展までの数学を視覚的に学習できるウェブアプリ",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
